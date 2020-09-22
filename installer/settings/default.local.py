@@ -3,7 +3,9 @@
 VPC = {
     "ID": "vpc-1",
     "CIDR_BLOCKS": ["10.0.0.0/16"],
-    "SUBNETS": ["subnet-1", "subnet-2"]
+    "SUBNETS": ["subnet-1", "subnet-2"],
+    "ALB_SUBNETS": ["subnet-public-1", "subnet-public-2"],
+    "ALB_ADDITIONAL_SECURITY_GROUPS": []
 }
 
 

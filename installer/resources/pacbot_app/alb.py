@@ -7,8 +7,8 @@ class ApplicationLoadBalancer(LoadBalancerResource):
     name = ""
     internal = Settings.get('MAKE_ALB_INTERNAL', True)
     load_balancer_type = "application"
-    security_groups = [InfraSecurityGroupResource.get_output_attr('id')]
-    subnets = Settings.get('VPC')['SUBNETS']
+    security_groups = [InfraSecurityGroupResource.get_output_attr('id')] +  Settings.get('VPC')['ALB_ADDITIONAL_SECURITY_GROUPS']
+    subnets = Settings.get('VPC')['ALB_SUBNETS']
 
     OUTPUT_LIST = ['dns_name']
 

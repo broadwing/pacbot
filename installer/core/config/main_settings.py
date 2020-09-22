@@ -9,7 +9,8 @@ BRAND_NAME = ""
 VPC = {
     'NAME': '',
     'CIDR': '',
-    'SUBNETS': []
+    'SUBNETS': [],
+    'ALB_SUBNETS': []
 }
 
 PROVIDER = "AWS"
